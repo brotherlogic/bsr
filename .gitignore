@@ -1,0 +1,14 @@
+*~
+*#
+target/
+.classpath
+.settings
+.project
+run.sh
+test.sh
+
+bsr
+.test*
+vendor/
+.antigravitycli
+.devcontainer/.env.auth
