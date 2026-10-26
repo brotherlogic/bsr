@@ -135,14 +135,16 @@ Untappd's Public API v4 enforces a strict rate limit of **100 requests per hour 
 
 ## 8. Implementation Roadmap
 
-1. **Phase 1: Protobuf & Backend Foundation**
+Each phase is specified in its own document with detailed deliverables, realistic integration test requirements, and strict exit criteria:
+
+1. **[Phase 1: Protobuf & Backend Foundation](PHASE1.md)**
    - Define `proto/bsr/v1/bsr.proto` and generate Go & Dart stubs.
    - Set up Go service scaffold, PostgreSQL migrations, and Kubernetes deployment configs (`deploy/`).
-2. **Phase 2: Untappd OAuth & User History Pipeline**
+2. **[Phase 2: Untappd OAuth & User History Pipeline](PHASE2.md)**
    - Implement Untappd OAuth 2.0 endpoints and rate-limit-aware Untappd v4 client in Go.
    - Implement CSV history parser and `/v4/user/beers` background syncer.
-3. **Phase 3: Venue Discovery & Ranking Engine**
+3. **[Phase 3: Venue Discovery & Ranking Engine](PHASE3.md)**
    - Implement `/v4/venue/search` and `/v4/venue/checkins` fetcher with 30-day PostgreSQL caching.
    - Implement the **Discover New** and **Rated Blend (60/40)** ranking logic.
-4. **Phase 4: Flutter Mobile App**
+4. **[Phase 4: Flutter Mobile App](PHASE4.md)**
    - Build OAuth login flow, GPS venue finder, CSV file picker, and the two-tab venue beer list UI (**Discover New** vs **Rated Blend**).
